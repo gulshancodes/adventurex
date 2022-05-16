@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdventureX - Tours & Travel Agency</title>
+    <!-- Designed & Built by : Gulshan Songara -->
+
+    <!--============= Favicon =============-->
+    <link rel="shortcut icon" href="assets/img/icons/favicon.png" type="image/x-icon">
+
+    <!--============= fontawesome CSS =============-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <!--============= jQuery-ui CSS =============-->
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+
+    <!--============= Swiper CSS =============-->
+    <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css">
+
+    <!--============= Bootstrap CSS =============-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!--============= Main Style CSS =============-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reponsive.css">
+</head>
+
+<body>
+
+    <!--============= Preloader =============-->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!--============= /Preloader =============-->
+
+    <!--============= Go-to-top button =============-->
+    <div id="goTop" title="Go to Top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <!--============= /Go-to-top button =============-->
+
+    <!--============= Header Section =============-->
+    <header id="header">
+        <nav class="navbar fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="javascript:void(0);">AdventureX</a>
+                <div class="nav_items">
+                    <i class="fas fa-search search_box" title="Search"></i>
+                    <input type="search" class="search_field" placeholder="Search...">
+                    <a href="#exampleModalToggle" data-bs-toggle="modal" role="button"
+                        class="ms-3 ms-sm-5 me-1 me-sm-4">
+                        <i class="fas fa-user" title="Login / Signup"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--============= /Header Section =============-->
+
+    <main>
+
+        <!--============= Hero Section =============-->
+        <section id="hero">
+            <div class="video_container">
+                <video src="assets/img/Videos/vid-1.mp4" autoplay loop muted></video>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto text-center">
+                        <div class="row hero_content">
+                            <div class="col-12">
+                                <h4>- Discover the colorful world -</h4>
+                            </div>
+                            <div class="col-12">
+                                <h1>Adventure is worthwhile</h1>
+                            </div>
+                            <div class="col-xxl-7 col-xl-8 col-lg-9 mx-auto">
+                                <p>Lifelong memories just a few seconds away. Fill your life with adventures, not
+                                    things.
+                                    Have stories to tell, not stuff to show.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--============= /Hero Section =============-->
+
+        <!--============= Booking-Label Section =============-->
+        <div class="container-fluid">
+            <div class="booking_label">
+                <form>
+                    <div class="input_box">
+                        <label>Destination</label><br>
+                        <input type="text" list="places" class="txt" placeholder="Where are you going?" required>
+                        <datalist id="places">
+                            <option value="India">
+                            <option value="Dubai">
+                            <option value="Paris">
+                            <option value="Japan">
+                            <option value="Italy">
+                            <option value="Norway">
+                        </datalist>
+                    </div>
+
+                    <div class="input_box">
+                        <label>Departure</label><br>
+                        <input type="text" class="datepicker" placeholder="Add Dates" required>
+                    </div>
+
+                    <div class="input_box">
+                        <label>Return</label><br>
+                        <input type="text" class="datepicker" placeholder="Add Dates" required>
+                    </div>
+
+                    <div class="input_box">
+                        <label>Guests</label><br>
+                        <input type="number" class="num" min="0" max="50" placeholder="Add Guests" required>
+                    </div>
+
+                    <div class="search_btn">
+                        <button type="submit" class="search_btn1"><i class="fas fa-search"></i></button>
+                        <button type="submit" class="search_btn2"><i class="fas fa-search"></i>Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--============= /Booking-Label Section =============-->
+
+        <!--============= Counter Section =============-->
+        <section id="counters">
+            <div class="container">
+                <div class="row justify-content-around gy-5 text-center counters_wrapper">
+                    <div class="col-lg-3 col-md-5">
+                        <i class="fas fa-smile"></i>
+                        <h3 class="counter">10000</h3>
+                        <h5>Happy Customers</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <i class="fas fa-users"></i>
+                        <h3 class="counter">10800</h3>
+                        <h5>Clients</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <i class="fas fa-user-tie"></i>
+                        <h3 class="counter">150</h3>
+                        <h5>Our Agents</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-5">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3 class="counter">15</h3>
+                        <h5>Years of Experience</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--============= /Counter Section =============-->
+
+        <!--============= About Section =============-->
+        <section id="about">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="title">- About us -</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center about_wrapper">
+                    <div class="col-lg-6">
+                        <div class="row g-0 justify-content-center align-items-center">
+                            <div class="col-lg-5 col-md-4 col-sm-5">
+                                <img src="assets/img/about-1.jpg" alt="" class="d-sm-block d-none">
+                            </div>
+                            <div class="col-lg-5 col-md-4 col-sm-5 ms-3">
+                                <img src="assets/img/about-2.jpg" alt="" class="d-sm-block d-none mb-3">
+                                <img src="assets/img/about-3.jpg" alt="" class="d-sm-block d-none">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-10 pe-lg-5 mt-lg-0 mt-sm-5 mt-0 text-lg-start text-center">
+                        <h5>Welcome to AdventureX -</h5>
+                        <h2 class="my-3">It's time to start your Adventure</h2>
+                        <p>Our travel agency is ready to offer you an exciting vacation that is designed to fit your own
+                            needs and wishes, facilis rerum dolores ut nesciunt architecto sed molestias
+                            totam iusto repudiandae eum eveniet...</p>
+                        <p class="d-xl-block d-lg-none">It's time to start your adventure. Let's start your journey with
+                            us,
+                            your dream will come true. Temporibus, adipisci recusandae inventore minus...</p>
+                        <a href="#service" class="button mt-3">Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--============= /About Section =============-->
+
+        <!--============= Packages Section =============-->
+        <section id="package">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="title">- Popular Destinations -</h2>
+                        <p>Take a look at the most visited locations in the world - hand-picked just for you</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid gx-0 mt-5">
+                <div class="row gx-0">
+
+                    <div class="col-lg-3 col-sm-6 package_content">
+                        <figure class="package_img">
+                            <img src="assets/img/package-1.jpg" alt="">
+                        </figure>
+                        <div class="package_info">
+                            <div class="package_txt">
+                                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <h6>Burj-Al-Arab Hotel</h6>
+                                <p>Dubai, UAE</p>
+                            </div>
+                            <div class="package_btn">
+                                <b>$ 450</b> <del>$480</del> <br>
+                                <a href="#exampleModalToggle2" data-bs-toggle="modal" role="button">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 package_content">
+                        <figure class="package_img">
+                            <img src="assets/img/package-2.jpg" alt="">
+                        </figure>
+                        <div class="package_info">
+                            <div class="package_txt">
+                                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <h6>Eiffel Tower</h6>
+                                <p>Paris, France</p>
+                            </div>
+                            <div class="package_btn">
+                                <b>$ 445</b> <del>$460</del> <br>
+                                <a href="#exampleModalToggle2" data-bs-toggle="modal" role="button">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 package_content">
+                        <figure class="package_img">
+                            <img src="assets/img/package-3.jpg" alt="">
+                        </figure>
+                        <div class="package_info">
+                            <div class="package_txt">
+                                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <h6>Taj Mahal</h6>
+                                <p>Agra, India</p>
+                            </div>
+                            <div class="package_btn">
+                                <b>$ 460</b> <del>$500</del> <br>
+                                <a href="#exampleModalToggle2" data-bs-toggle="modal" role="button">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 package_content">
+                        <figure class="package_img">
+                            <img src="assets/img/package-4.jpg" alt="">
+                        </figure>
+                        <div class="package_info">
+                            <div class="package_txt">
+                                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <h6>Mount Otemanu</h6>
+                                <p>Bora Bora Island</p>
+                            </div>
+                            <div class="package_btn">
+                                <b>$ 455</b> <del>$470</del> <br>
+                                <a href="#exampleModalToggle2" data-bs-toggle="modal" role="button">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 package_content">
+                        <figure class="package_img">
+                            <img src="assets/img/package-5.jpg" alt="">
+                        </figure>
+                        <div class="package_info">
+                            <div class="package_txt">
+                                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <h6>Piazza dei Miracoli</h6>
+                                <p>Pisa, Italy</p>
+                            </div>
+                            <div class="package_btn">
+                                <b>$ 400</b> <del>$430</del> <br>
+                                <a href="#exampleModalToggle2" data-bs-toggle="modal" role="button">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 package_content">
+                        <figure class="package_img">
+                            <img src="assets/img/package-6.jpg" alt="">
+                        </figure>
+                        <div class="package_info">
+                            <div class="package_txt">
+                                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <h6>Gateway of India</h6>
+                                <p>Mumbai, India</p>
+                            </div>
+                            <div class="package_btn">
+                                <b>$ 475</b> <del>$500</del> <br>
+                                <a href="#exampleModalToggle2" data-bs-toggle="modal" role="button">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 package_content">
+                        <figure class="package_img">
+                            <img src="assets/img/package-7.jpg" alt="">
+                        </figure>
+                        <div class="package_info">
+                            <div class="package_txt">
+                                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <h6>Miyajima Island</h6>
+                                <p>Hiroshima Bay, Japan</p>
+                            </div>
+                            <div class="package_btn">
+                                <b>$ 485</b> <del>$500</del> <br>
+                                <a href="#exampleModalToggle2" data-bs-toggle="modal" role="button">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 package_content">
+                        <figure class="package_img">
+                            <img src="assets/img/package-8.jpg" alt="">
+                        </figure>
+                        <div class="package_info">
+                            <div class="package_txt">
+                                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                <h6>Sengen Park</h6>
+                                <p>Yamanashi, Japan</p>
+                            </div>
+                            <div class="package_btn">
+                                <b>$ 480</b> <del>$495</del> <br>
+                                <a href="#exampleModalToggle2" data-bs-toggle="modal" role="button">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+        <!--============= /Packages Section =============-->
+
+        <!--============= Services Section =============-->
+        <section id="service">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="title">- Services -</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center service_wrapper">
+                    <div class="col-lg-3 service_card shadow">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Safety Guide</h3>
+                        <p>Dolor sit, amet consectetur adipisicing elit. Maiores eaque eius adipisci.</p>
+                    </div>
+
+                    <div class="col-lg-3 service_card shadow">
+                        <i class="fas fa-hiking"></i>
+                        <h3>Active Tours</h3>
+                        <p>Amet consectetur adipisicing elit. Maiores eaque eius adipisci dolorum.</p>
+                    </div>
+
+                    <div class="col-lg-3 service_card shadow">
+                        <i class="fas fa-hotel"></i>
+                        <h3>Affordable Hotels</h3>
+                        <p>Ipsum amet dolor sit, amet consectetur maiores adipisicing elit eaque eius.</p>
+                    </div>
+
+                    <div class="col-lg-3 service_card shadow">
+                        <i class="fas fa-plane"></i>
+                        <h3>Fastest Travels</h3>
+                        <p>Consectetur adipisicing elit. Maiores eaque eius adipisci dolorum pariatur.</p>
+                    </div>
+
+                    <div class="col-lg-3 service_card shadow">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Food and Drinks</h3>
+                        <p>Maiores eaque eius adipisci dolorum pariatur consectetur adipisicing elit.</p>
+                    </div>
+
+                    <div class="col-lg-3 service_card shadow">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h3>Summer Travels</h3>
+                        <p>Fugiate dolore sit, adipisicing elit. Maiores eaquel eius adipisci dolorum.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--============= /Services Section =============-->
+
+        <!--============= Testimonials Section =============-->
+        <section id="testi">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="title">- Traveller's Experiences -</h2>
+                    </div>
+                </div>
+
+                <div class="swiper testi_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <blockquote class="testi_review">
+                                " Donec sagittis fermentum purus, id mattis enim accumsan quis. Interdum et malesuada
+                                fames
+                                ac ante primis in faucibus. Aliquam nibh massa, semper et nunc eu, rhoncus scelerisque
+                                urna.
+                                "
+                            </blockquote>
+                            <figure class="testi_img">
+                                <img src="assets/img/testi/testi-01.png" alt="">
+                            </figure>
+                            <div class="testi_info">
+                                <h4>John Rock</h4>
+                                <span>Team Leader</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <blockquote class="testi_review">
+                                " Vestibulum cursus tempus dapibus. Cras vel massa vitae felis interdum aliquam. Mauris
+                                nec
+                                urna erat. Donec in urna malesuada, finibus enim eu, congue arcu. "
+                            </blockquote>
+                            <figure class="testi_img">
+                                <img src="assets/img/testi/testi-02.png" alt="">
+                            </figure>
+                            <div class="testi_info">
+                                <h4>Dwayne J.</h4>
+                                <span>Manager</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <blockquote class="testi_review">
+                                " Sed fermentum tortor dui, dignissim efficitur enim sagittis pellentesque. Donec vel
+                                enim
+                                vel risus porttitor semper. Morbi nibh diam, semper quis nunc a, mollis cursus turpis. "
+                            </blockquote>
+                            <figure class="testi_img">
+                                <img src="assets/img/testi/testi-03.png" alt="">
+                            </figure>
+                            <div class="testi_info">
+                                <h4>Michael Smith</h4>
+                                <span>Team Leader</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <blockquote class="testi_review">
+                                " Sem et ultricies dictum, diam nibh maximus enim, non suscipit nisl nibh nec felis.
+                                Maecenas vitae luctus urna. Ut in libero lobortis, aliquet nisi eu, faucibus metus. "
+                            </blockquote>
+                            <figure class="testi_img">
+                                <img src="assets/img/testi/testi-04.png" alt="">
+                            </figure>
+                            <div class="testi_info">
+                                <h4>Ritwick Doe</h4>
+                                <span>Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                            class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                        </svg>
+                    </div>
+
+                    <div class="swiper-button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                            class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--============= /Testimonials Section =============-->
+
+        <!--============= Explore Banner Section =============-->
+        <section id="explore_banner">
+            <video src="assets/img/Videos/vid-2.mp4" autoplay loop muted></video>
+            <div class="explore_content">
+                <h3>“Go where you feel most alive.”</h3>
+                <p>Find a beautiful place, and get lost.
+                    Head in the clouds, on to the next destination.</p>
+            </div>
+        </section>
+        <!--============= /Explore Banner Section =============-->
+
+        <!--============= Blogs Section =============-->
+        <section id="blogs">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="title">- Recent Posts -</h2>
+                    </div>
+                </div>
+
+                <div class="row blogs_wrapper">
+                    <div class="col-lg-3 col-sm-6 blogs_card">
+                        <div class="blogs_img">
+                            <span>24 Oct 2018</span>
+                            <img src="assets/img/blog-1.jpg" alt="">
+                        </div>
+                        <div class="blogs_txt mt-4">
+                            <h6>Far away behind the mountains</h6>
+                            <p>Dolor ame conseetur adipisicing elit. A explicabo, officiis
+                                earum dolorem.</p>
+                            <a href="javascript:void(0);" class="button">Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 blogs_card">
+                        <div class="blogs_img">
+                            <span>26 Jan 2019</span>
+                            <img src="assets/img/blog-2.jpg" alt="">
+                        </div>
+                        <div class="blogs_txt mt-4">
+                            <h6>First Anniversary in Norway</h6>
+                            <p>A explicabo, fugiat officis vel
+                                earum dorem. Amet conseetur adipisicing elit. </p>
+                            <a href="javascript:void(0);" class="button">Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 blogs_card">
+                        <div class="blogs_img">
+                            <span>04 Aug 2020</span>
+                            <img src="assets/img/blog-3.jpg" alt="">
+                        </div>
+                        <div class="blogs_txt mt-4">
+                            <h6>Discover the new adventure</h6>
+                            <p>Sit amet consectur adicing elit. Explicabo, fugiat officiis vel
+                                earum.</p>
+                            <a href="javascript:void(0);" class="button">Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 blogs_card">
+                        <div class="blogs_img">
+                            <span>1 Jan 2021</span>
+                            <img src="assets/img/blog-4.jpg" alt="">
+                        </div>
+                        <div class="blogs_txt mt-4">
+                            <h6>Beautiful Beaches in the world</h6>
+                            <p>Earum dolorem amet, explicabo fugiat consectetur adipisicing elit.
+                            </p>
+                            <a href="javascript:void(0);" class="button">Read More
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--============= /Blogs Section =============-->
+
+        <!--============= Subscribe Section =============-->
+        <section id="subs">
+            <div class="container-lg container-fluid">
+                <div class="row justify-content-center align-items-center text-white text-center subs_wrapper">
+                    <div class="col-lg-5">
+                        <h3>Subscribe to our newsletter</h3>
+                    </div>
+                    <div class="col-lg-5 col-sm-10 offset-lg-1">
+                        <form>
+                            <input type="email" placeholder="Your Email*" class="subs_mail" required>
+                            <button type="submit" class="button subs_btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--============= /Subscribe Section =============-->
+
+        <!--============= Partners Section =============-->
+        <div id="partners" class="container">
+            <div class="swiper partners_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/img/icons/logo-01.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/icons/logo-02.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/icons/logo-03.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/icons/logo-04.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/icons/logo-05.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/icons/logo-02.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/icons/logo-03.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--============= /Partners Section =============-->
+
+    </main>
+
+    <!--============= Footer Section =============-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row justify-content-between gy-5 text-lg-start text-center footer_wrapper">
+                <div class="col-lg-4">
+                    <h4>AdventureX</h4>
+                    <p>Lifelong memories just a few seconds away. Let's start your journey with us, your dream will come
+                        true.</p>
+                    <div class="foot_social_links">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                <path
+                                    d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="mx-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                <path
+                                    d="M25,2C12.317,2,2,12.317,2,25s10.317,23,23,23s23-10.317,23-23S37.683,2,25,2z M36.237,20.524c0.01,0.236,0.016,0.476,0.016,0.717C36.253,28.559,30.68,37,20.491,37c-3.128,0-6.041-0.917-8.491-2.489c0.433,0.052,0.872,0.077,1.321,0.077c2.596,0,4.985-0.884,6.879-2.37c-2.424-0.044-4.468-1.649-5.175-3.847c0.339,0.065,0.686,0.1,1.044,0.1c0.505,0,0.995-0.067,1.458-0.195c-2.532-0.511-4.441-2.747-4.441-5.432c0-0.024,0-0.047,0-0.07c0.747,0.415,1.6,0.665,2.509,0.694c-1.488-0.995-2.464-2.689-2.464-4.611c0-1.015,0.272-1.966,0.749-2.786c2.733,3.351,6.815,5.556,11.418,5.788c-0.095-0.406-0.145-0.828-0.145-1.262c0-3.059,2.48-5.539,5.54-5.539c1.593,0,3.032,0.672,4.042,1.749c1.261-0.248,2.448-0.709,3.518-1.343c-0.413,1.292-1.292,2.378-2.437,3.064c1.122-0.136,2.188-0.432,3.183-0.873C38.257,18.766,37.318,19.743,36.237,20.524z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="me-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                <path
+                                    d="M15,12.124c-1.589,0-2.876,1.288-2.876,2.876s1.288,2.876,2.876,2.876s2.876-1.288,2.876-2.876S16.589,12.124,15,12.124z" />
+                                <circle cx="15" cy="15" r="3" />
+                                <path
+                                    d="M15,2C7.832,2,2,7.832,2,15s5.832,13,13,13s13-5.832,13-13S22.168,2,15,2z M24,18.333C24,21.458,21.458,24,18.334,24h-6.667	C8.542,24,6,21.458,6,18.334v-6.667C6,8.542,8.542,6,11.666,6h6.667C21.458,6,24,8.542,24,11.666V18.333z" />
+                                <path
+                                    d="M18.333,8h-6.667C9.645,8,8,9.645,8,11.667v6.667C8,20.355,9.645,22,11.667,22h6.667C20.355,22,22,20.355,22,18.333v-6.667	C22,9.645,20.355,8,18.333,8z M15,20c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S17.757,20,15,20z M19.667,11	C19.299,11,19,10.701,19,10.333s0.299-0.667,0.667-0.667c0.368,0,0.667,0.299,0.667,0.667S20.035,11,19.667,11z" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                <path
+                                    d="M25,2C12.3,2,2,12.3,2,25s10.3,23,23,23s23-10.3,23-23S37.7,2,25,2z M19,35c0,0.5-0.5,1-1,1h-4c-0.5,0-1-0.5-1-1V20 c0-0.5,0.5-1,1-1h4c0.5,0,1,0.5,1,1V35z M16,18c-1.6,0-3-1.4-3-3s1.4-3,3-3s3,1.4,3,3S17.6,18,16,18z M38,35c0,0.5-0.5,1-1,1h-4 c-0.5,0-1-0.5-1-1v-7.5c0-1.4-1.1-2.5-2.5-2.5S27,26.1,27,27.5V35c0,0.5-0.5,1-1,1h-4c-0.5,0-1-0.5-1-1V20c0-0.5,0.5-1,1-1h4 c0.5,0,1,0.4,1,1c1.1-0.6,2.2-1,3.5-1c4.1,0,7.5,3.4,7.5,7.5V35z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Quick Links</h5>
+                    <ul class="px-0 foot_links">
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#package">Packages</a></li>
+                        <li><a href="#">News & Events</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Useful Links</h5>
+                    <ul class="px-0 foot_links">
+                        <li><a href="#">Visa</a></li>
+                        <li><a href="#">Travel Advisory</a></li>
+                        <li><a href="#">How to pay</a></li>
+                        <li><a href="#">Safe Trips</a></li>
+                        <li><a href="#">Documents</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <ul class="px-0 foot_links">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="ms-2"> +91 9876543210 </span>
+                        </li>
+                        <li class="my-4">
+                            <i class="fas fa-envelope"></i>
+                            <span class="ms-2"> info@adventurex.com </span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="ms-2"> New Delhi, India </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foot_credit text-center">
+                <p>
+                    &#169;
+                    <script>
+                        document.write(new Date().getFullYear() + ' ');
+                    </script>
+                    AdventureX.&#160; All Rights Reserved.&#160;
+                    <span> Designed & Built by | <a href="https://gulshansongara.netlify.app/" target="_blank">Gulshan
+                            Songara</a> </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--============= /Footer Section =============-->
+
+    <!--============= Login-Modal =============-->
+    <!-- Modal-01 -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-4 id=" exampleModalToggleLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="input_box">
+                            <input type="email" class="form-control mt-3" placeholder="Your Email*" required>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" class="form-control mt-4 mb-3" placeholder="Your Password*" required>
+                        </div>
+                        <a href="#exampleModalToggle3" data-bs-toggle="modal" role="button" class="text-primary">Forgot
+                            Password?</a>
+                        <button type="submit" class="button form-control mt-4 mb-3">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="mx-auto">
+                        <span>Don't have an Account?</span> &#160;
+                        <a href="#exampleModalToggle2" data-bs-toggle="modal" role="button" class="text-primary">Create
+                            a new Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal-02 -->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-4" id="exampleModalToggleLabel2">Signup</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="input_box">
+                            <input type="text" class="form-control mt-3" placeholder="Fullname*" required>
+                        </div>
+                        <div class="input_box">
+                            <input type="email" class="form-control my-4" placeholder="Email*" required>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" class="form-control mb-4" placeholder="Password*" required>
+                        </div>
+                        <div class="input_box">
+                            <input type="checkbox" id="check" required>
+                            <label for="check">Agree to our Terms and Conditions!</label>
+                        </div>
+                        <button type="submit" class="button form-control mt-4 mb-3">Signup</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="mx-auto">
+                        <span>Already have an Account?</span> &#160;
+                        <a href="#exampleModalToggle" data-bs-toggle="modal" role="button"
+                            class="text-primary">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal-03 -->
+    <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel3">Recover Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="input_box">
+                            <input type="number" class="form-control mt-3 mb-4" placeholder="Enter you Mobile Number*"
+                                required>
+                            <button type="submit" class="button form-control mb-3">Send OTP</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="mx-auto">
+                        <span>Back to &#160;<a href="#exampleModalToggle" data-bs-toggle="modal" role="button"
+                                class="text-primary">Login</a>&#160; Page</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--============= /Login-Modal =============-->
+
+    <!--============= Javascript Files =============-->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

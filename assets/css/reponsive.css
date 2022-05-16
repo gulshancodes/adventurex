@@ -1,0 +1,119 @@
+/*
+* Website Name : AdventureX - Travel Agency Website
+* Designed & Coded By : Gulshan Songara 
+*/
+
+
+/*=============== lg screens ===============*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .package_info > .package_txt {
+        margin-left: 10px;
+    }
+
+    .package_info > .package_txt > h6 {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+     
+    .package_info > .package_txt > p {
+         font-size: 12px;
+         margin-bottom: 0;
+    }
+
+    .package_info > .package_btn {
+        margin-right: 10px;
+    }
+
+    .package_info > .package_btn > b {
+        font-size: 16px;
+    }
+}
+
+/*=============== md screens ===============*/
+@media (max-width: 992px) {
+    .service_card {
+        width: 300px;
+    }
+}
+
+/*=============== sm screens ===============*/
+@media (max-width: 768px) {
+
+    #hero {
+        min-height: 100vh;
+    }
+    
+    .booking_label {
+        max-width: 500px;
+        background: none;
+        border-radius: 10px;
+        margin-top: 60px;
+        padding: 40px 30px;
+    }
+
+    .booking_label > form {
+        height: 400px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .booking_label .input_box {
+        width: 100% !important;
+        border-left: none !important;
+        padding-left: 0 !important;
+    }
+    
+    .booking_label .input_box > input {
+        background-color: #e9ecef;
+        padding: 10px;
+    }
+
+    .search_btn {
+        width: 100%;
+    }
+
+    .search_btn1 {
+        display: none;
+    }
+    
+    .search_btn2 {
+        display: block;
+    }
+
+    #counters {
+        padding: 100px 0 80px;
+    }
+
+    .service_card {
+        width: auto;
+        padding: 30px;
+    }
+
+}
+
+/*=============== x-sm screens ===============*/
+@media (max-width: 576px) {
+
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .nav_items {
+        font-size: 14px;
+    }
+
+    .hero_content {
+        font-size: 80%;
+    }
+
+    .hero_content h1 {
+        font-size: 22px;
+    }
+
+    .hero_content h4 {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+}

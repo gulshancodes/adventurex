@@ -1,0 +1,934 @@
+/*
+* Website Name : AdventureX - Travel Agency Website
+* Designed & Coded By : Gulshan Songara 
+*/
+
+/*
+========== ::INDEX:: ============
+
+01) Fonts
+02) Global Variables
+03) General Style
+04) Preloader
+05) Go-to-top button
+06) Header Section
+07) Hero Section
+08) Booking-Label Section
+09) Counter Section
+10) About Section
+11) Packages Section
+12) Services Section
+13) Testimonials Section
+14) Explore Banner Section
+15) Blogs Section
+16) Subscribe Section
+17) Partners Section 
+18) Footer Section
+
+*/
+
+/*=============== 01) Fonts ===============*/
+@font-face {
+    font-family: "Lato";
+    src: url(../fonts/Lato-Regular.ttf);
+}
+
+/*=============== 02) Global Variables ===============*/
+:root {
+    --main-gradient: #0d6efd;
+    --main-gradient: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    --main-gradient2: #0d6efd;
+    --main-gradient2: linear-gradient(90deg, #3a47d5 0%, #00d2ff 100%);
+    --bg-color: #f5f9fc;
+    --text-color: #a9afc3;
+}
+
+/*=============== 03) General Style ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    overflow-x: hidden;
+    padding-right: 0 !important;
+}
+
+body.modal-open {
+    padding-right: 0 !important;
+}
+
+section {
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+i, svg, img {
+    vertical-align: middle;
+    user-select: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    background-image: var(--main-gradient);
+    color: #fff;
+    padding: 8px 20px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -ms-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+}
+
+.button svg {
+    margin-bottom: 1px;
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -ms-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+}
+
+.button:hover svg {
+    -webkit-transform: translateX(7px) scaleX(1.2);
+    -moz-transform: translateX(7px) scaleX(1.2);
+    -ms-transform: translateX(7px) scaleX(1.2);
+    -o-transform: translateX(7px) scaleX(1.2);
+    transform: translateX(7px) scaleX(1.2);
+}
+
+.button:active {
+    color: #fff;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+/*=============== 04) Preloader ===============*/
+#preloader {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+}
+
+.loader {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #0d6efd;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #3a47d5;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+.loader::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #00d2ff;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*=============== Preloader Ends ===============*/
+
+/*=============== 05) Go-to-top button ===============*/
+#goTop {
+    position: fixed;
+    bottom: 3vw;
+    right: 3vw;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-image: var(--main-gradient);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.30);
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    transform: translateY(100px);
+    -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#goTop.show {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+#goTop:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    background-image: var(--main-gradient2);
+}
+
+#goTop:active {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+#goTop > i.fas {
+    font-size: 20px;
+    color: #fff;
+}
+/*=============== Go-to-top Ends ===============*/
+
+/*=============== 06) Header Section ===============*/
+#header > .navbar {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    background-image: var(--main-gradient);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.30);
+}
+
+.nav_items i.fas {
+    color: #fff;
+    cursor: pointer;
+    line-height: 35px;
+}
+
+.nav_items > .search_field {
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    padding: 3px 10px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: none;
+}
+/*=============== Header Ends ===============*/
+
+/*=============== 07) Hero Section ===============*/
+#hero {
+    min-height: 85vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero > .video_container > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(70%);
+}
+
+.hero_content {
+    color: #fff;
+    text-transform: uppercase;
+    filter: drop-shadow(0 2px 2px #000);
+}
+
+.hero_content h1 {
+    margin: 15px 0;
+    letter-spacing: 0.8px;
+    word-spacing: 2px;
+}
+
+.hero_content h4 {
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.hero_content p {
+    letter-spacing: 0.8px;
+    text-transform: initial;
+    color: #ccc;
+}
+/*=============== Hero Ends ===============*/
+
+/*============= 08) Booking-Label Section =============*/
+.booking_label {
+    background-color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 12px 30px 14px;
+    border-radius: 100px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px -5px #000;
+    position: relative;
+    z-index: 888;
+    margin-top: -38px;
+}
+
+.booking_label > form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.booking_label .input_box:hover {
+    background-color: #e9ecef;
+}
+
+.booking_label .input_box:first-child {
+    width: 28%;
+}
+
+.booking_label .input_box:nth-child(2),
+.booking_label .input_box:nth-child(3),
+.booking_label .input_box:nth-child(4) {
+    width: 20%;
+    border-left: 1px solid #999;
+    padding-left: 28px;
+}
+
+.booking_label .input_box > label {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+}
+
+
+.booking_label .input_box > input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.search_btn1 {
+    background-image: var(--main-gradient);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.search_btn1:hover {
+    background-image: var(--main-gradient2);
+}
+
+.search_btn2 {
+    display: none;
+    background-image: var(--main-gradient2);
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    padding: 8px 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.search_btn2 > i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.search_btn2:hover {
+    background-image: var(--main-gradient);
+}
+/*============ Booking-Label Ends ============*/
+
+/*============= 09) Counter Section =============*/
+#counters {
+    padding: 140px 0;
+}
+
+.counters_wrapper i {
+    font-size: 20px;
+    background-image: var(--main-gradient);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.20);
+}
+
+.counters_wrapper h3 {
+    font-size: 28px;
+    margin: 20px 0 10px;
+    font-weight: 600;
+    background-image: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.counters_wrapper h5 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+/*============= Counter Ends =============*/
+
+/*=============== 10) About Section ===============*/
+#about {
+    background-color: var(--bg-color);
+    padding: 50px 0 100px;
+    user-select: none;
+}
+
+.about_wrapper {
+    margin-top: 80px;
+}
+
+.about_wrapper h5 {
+    letter-spacing: 1px;
+}
+
+.about_wrapper h2 {
+    font-size: 26px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about_wrapper p {
+    letter-spacing: 0.4px;
+}
+/*=============== About Ends ===============*/
+
+/*=============== 11) Packages Section ===============*/
+#package {
+    padding: 80px 0;
+}
+
+.package_content {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.package_content > .package_img {
+    margin: 0;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.package_content:hover > .package_img {
+    -webkit-transform: translateY(-95px);
+    -moz-transform: translateY(-95px);
+    -ms-transform: translateY(-95px);
+    -o-transform: translateY(-95px);
+    transform: translateY(-95px);
+}
+
+.package_content > .package_info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    padding-bottom: 16px;
+    cursor: initial;
+}
+
+.package_info > .package_txt {
+    margin-left: 20px;
+}
+
+.package_info > .package_txt > span {
+    color: goldenrod;
+}
+
+.package_info > .package_txt > h6 {
+   font-size: 16px;
+   margin-bottom: 0;
+}
+
+.package_info > .package_txt > p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.package_info > .package_btn {
+    margin-right: 20px;
+}
+
+.package_info > .package_btn > b {
+    font-size: 18px;
+}
+
+.package_info > .package_btn del {
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.package_info > .package_btn > a {
+    display: inline-block;
+    background-image: var(--main-gradient);
+    padding: 6px 12px;
+    margin-top: 10px;
+    font-size: 14px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.20);
+}
+
+.package_info > .package_btn > a:hover {
+    background-image: var(--main-gradient2);
+}
+/*=============== Packages Ends ===============*/
+
+/*=============== 12) Services Section ===============*/
+#service {
+    background-color: var(--bg-color);
+    padding: 80px 0;
+}
+
+.service_wrapper {
+    margin-top: 80px;
+    gap: 40px;
+}
+
+.service_card {
+    width: 400px;
+    padding: 30px 40px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.service_card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-image: var(--main-gradient);
+}
+
+.service_card > i {
+    font-size: 25px;
+    background-image: var(--main-gradient);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.service_card > h3 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 30px;
+    background-image: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.service_card:hover,
+.service_card:hover > i {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.30) !important;
+}
+/*=============== Services Ends ===============*/
+
+/*============= 13) Testimonials Section =============*/
+#testi {
+    padding: 80px 0 100px;
+    user-select: none;
+}
+
+.testi_swiper {
+    max-width: 700px;
+    height: auto;
+    text-align: center;
+    padding: 80px 0 60px;
+}
+
+.testi_swiper .swiper-slide > .testi_review {
+    margin-bottom: 30px;
+}
+
+.testi_swiper .swiper-slide > .testi_info > h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.testi_swiper .swiper-slide > .testi_info > span {
+    font-size: 14px;
+}
+
+#testi .swiper-button-next, 
+#testi .swiper-button-prev {
+    top: 65%;
+    width: 30px;
+}
+
+#testi .swiper-button-next:after,
+#testi .swiper-button-prev:after {
+    content: none;
+}
+/*============= Testimonials Ends =============*/
+
+/*============= 14) Explore Banner Section =============*/
+#explore_banner {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#explore_banner > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.explore_content {
+    color: #fff;
+    text-align: center;
+}
+/*============= Explore Banner Ends =============*/
+
+/*=============== 15) Blogs Section ===============*/
+#blogs {
+    padding: 90px 0 80px;
+    user-select: none;
+    text-align: center;
+}
+
+.blogs_wrapper {
+    margin-top: 50px;
+}
+
+.blogs_card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 4px;
+    padding: 25px 20px 30px;
+}
+
+.blogs_card > .blogs_img {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.blogs_card > .blogs_img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 40px;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+
+.blogs_card:hover > .blogs_img::before {
+    opacity: 0.5;
+}
+
+.blogs_card > .blogs_img > span {
+    position: absolute;
+    top: 8px;
+    left: -100px;
+    color: #fff;
+    -webkit-transition: left 0.2s linear;
+    -moz-transition: left 0.2s linear;
+    -ms-transition: left 0.2s linear;
+    -o-transition: left 0.2s linear;
+    transition: left 0.2s linear;
+}
+
+.blogs_card:hover > .blogs_img > span 
+{
+    left: 20px;
+}
+
+.blogs_card > .blogs_txt > h6 {
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.blogs_card > .blogs_txt > p {
+    font-size: 14px;
+    color: #444;
+}
+/*=============== Blogs Ends ===============*/
+
+/*============= 16) Subscribe Section =============*/
+#subs {
+    padding: 30px 0 80px;
+}
+
+.subs_wrapper {
+    width: auto;
+    min-height: 200px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.subs_wrapper::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(../img/sub-img.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(60%);
+}
+
+.subs_mail {
+    width: 50%;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+}
+
+.subs_btn:hover {
+    background-image: var(--main-gradient2);
+}
+/*============= Subscribe Ends =============*/
+
+/*=============== 17) Partners Section ===============*/
+#partners {
+    padding: 10px 0 50px;
+}
+
+.partners_swiper .swiper-slide{
+    text-align: center;
+}
+/*=============== Partners Ends ===============*/
+
+/*=============== 18) Footer Section ===============*/
+#footer {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8)), url(../img/foot-bg.jpg);
+    background-position: 0 50px;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 0 20px;
+}
+
+.footer_wrapper h4{
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+}
+
+.footer_wrapper p {
+    color: var(--text-color);
+    font-size: 15px;
+    letter-spacing: 0.8px;
+    margin-top: 20px;
+}
+
+.foot_social_links {
+    margin-top: 28px;
+}
+
+.foot_social_links svg {
+    fill: var(--text-color);
+    width: 26px;
+    height: 26px;
+}
+
+.foot_social_links > a:hover > svg {
+    fill: #eee;
+}
+
+.foot_links {
+    margin-top: 25px;
+}
+
+.foot_links > li {
+    margin: 8px 0;
+}
+
+.foot_links > li,
+.foot_links li > a {
+    color: var(--text-color);
+}
+
+.foot_links > li a:hover {
+    color: #fff;
+}
+
+.foot_credit {
+    margin-top: 40px;
+    padding-top: 35px;
+    border-top: 1px dashed #888;
+    color: #888;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+}
+
+.foot_credit span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.foot_credit span > a {
+    color: #ccc;
+}
+
+.foot_credit span > a:hover {
+    color: #fff;
+}
+/*=============== Footer Ends ===============*/
