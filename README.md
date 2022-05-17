@@ -1,6 +1,6 @@
 ## AdventureX - Tours and Travels Agency Website
 
-### [Demo Link](https://adventurex.netlify.app) 🔗
+### [Demo Link](https://adventure-x.netlify.app/) 🔗
 
 A single-page Travel-agency website with clean, modern & simple design. It features vibrant colors and a well crafted layout with easy navigations.
 <br/>
