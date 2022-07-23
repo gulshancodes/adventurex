@@ -2,7 +2,7 @@
 
 ### [Demo Link](https://adventure-x.netlify.app/) 🔗
 
-A single-page Travel-agency website with clean, modern & simple design. It features vibrant colors and a well crafted layout with easy navigations.
+A single-page Travel Agency website with a clean, modern & minimal design. It features vibrant colors, video backgrounds, and a well-crafted layout with easy navigation.
 <br/>
 
 ## Features:
@@ -22,7 +22,7 @@ A single-page Travel-agency website with clean, modern & simple design. It featu
 
 ## Author:
 
-- **Gulshan Songara** - **[Portfolio Website](https://gulshansongara.netlify.app)**, **[Linkedin](https://www.linkedin.com/in/gulshan-songara-75084214b/)** 
+- **Gulshan Songara** - **[Portfolio Website](https://gulshansongara.netlify.app)**, **[Linkedin](https://www.linkedin.com/in/gulshansongara/)** 
 <br/>
 
 ## License:
