@@ -12,7 +12,7 @@ A single-page Travel Agency website with a clean, modern & minimal design. It fe
 - #### **Video Backgrounds 🎥**
 <br/>
 
-## Technologies used:
+## Languages used:
 
 - #### **HTML**
 - #### **CSS**
